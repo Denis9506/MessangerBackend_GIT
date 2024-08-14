@@ -1,10 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessangerBackend", "MessangerBackend\MessangerBackend.csproj", "{5722F493-96AC-4C2A-9734-7C131D4BD5A6}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessangerBackend", "MessangerBackend\MessangerBackend.csproj", "{5722F493-96AC-4C2A-9734-7C131D4BD5A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessangerBackend.Core", "MessangerBackend.Core\MessangerBackend.Core.csproj", "{3665FBA7-DC9E-4FD2-BA46-60E1B3BDCC3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessangerBackend.Core", "MessangerBackend.Core\MessangerBackend.Core.csproj", "{3665FBA7-DC9E-4FD2-BA46-60E1B3BDCC3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessangerBackend.Storage", "MessangerBackend.Storage\MessangerBackend.Storage.csproj", "{2421EB59-B90F-46C4-A3D8-8E985A0F45D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessangerBackend.Storage", "MessangerBackend.Storage\MessangerBackend.Storage.csproj", "{2421EB59-B90F-46C4-A3D8-8E985A0F45D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessangerBackend.Tests", "MessangerBackend.Tests\MessangerBackend.Tests.csproj", "{D77A4FCE-1D84-4FC3-BA0D-FD4B995EE3B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +29,15 @@ Global
 		{2421EB59-B90F-46C4-A3D8-8E985A0F45D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2421EB59-B90F-46C4-A3D8-8E985A0F45D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2421EB59-B90F-46C4-A3D8-8E985A0F45D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D77A4FCE-1D84-4FC3-BA0D-FD4B995EE3B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D77A4FCE-1D84-4FC3-BA0D-FD4B995EE3B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D77A4FCE-1D84-4FC3-BA0D-FD4B995EE3B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D77A4FCE-1D84-4FC3-BA0D-FD4B995EE3B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6035DED-4953-4CE1-A2A7-357501AE8F61}
 	EndGlobalSection
 EndGlobal

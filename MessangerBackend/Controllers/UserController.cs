@@ -1,42 +1,75 @@
 ﻿using AutoMapper;
-using MessangerBackend.Core.Models;
+using MessangerBackend.Core.Interfaces;
+using MessangerBackend.Core.Models.Exceptions;
 using MessangerBackend.DTOs;
-using MessangerBackend.Requests;
-using MessangerBackend.Storage;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
-namespace MessangerBackend.Controllers;
-
-[ApiController]
-[Route("api/users")]
-public class UserController : Controller
+namespace MessangerBackend.Controllers
 {
-    private readonly MessangerContext _context;
-    private readonly IMapper _mapper;
+    [ApiController]
+    [Route("api/users")]
+    public class UserController : ControllerBase
+    {
+        private readonly IUserService _userService;
+        private readonly IMapper _mapper;
 
-    public UserController(MessangerContext context, IMapper mapper)
-    {
-        _context = context;
-        _mapper = mapper;
-    }
-    
-    [HttpPost]
-    public async Task<ActionResult<UserDTO>> AddUser(CreateUserRequest request)
-    {
-        var userDb = _mapper.Map<User>(request);
-        userDb.CreatedAt = userDb.LastSeenOnline = DateTime.UtcNow;
-        
-        _context.Users.Add(userDb);
-        await _context.SaveChangesAsync();
-        
-        return Created("user", _mapper.Map<UserDTO>(userDb));
-    }
+        public UserController(IUserService userService, IMapper mapper)
+        {
+            _userService = userService;
+            _mapper = mapper;
+        }
+        [HttpPost("register")]
+        public async Task<ActionResult<UserDTO>> RegisterUser([FromBody] UserLoginRegisterDTO userDto)
+        {
+            try
+            {
+                var user = await _userService.Register(userDto.Nickname, userDto.Password);
+                return Ok(_mapper.Map<UserDTO>(user));
+            }
+            catch (UserServiceException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsers()
-    {
-        var users = await _context.Users.ToListAsync();
-        return Ok(_mapper.Map<IEnumerable<UserDTO>>(users));
+        [HttpPost("login")]
+        public async Task<ActionResult<UserDTO>> LoginUser([FromBody] UserLoginRegisterDTO userDto)
+        {
+            try
+            {
+                var user = await _userService.Login(userDto.Nickname, userDto.Password);
+                return Ok(_mapper.Map<UserDTO>(user));
+            }
+            catch (UserServiceException ex)
+            {
+                return Unauthorized(ex.Message);
+            }
+        }
+
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<UserDTO>> GetUserById([FromRoute] int id)
+        {
+            var user = await _userService.GetUserById(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(_mapper.Map<UserDTO>(user));
+        }
+
+        [HttpGet]
+        public ActionResult<IEnumerable<UserDTO>> GetUsers([FromQuery] int page = 1, [FromQuery] int size = 10)
+        {
+            var users = _userService.GetUsers(page, size);
+            return Ok(_mapper.Map<IEnumerable<UserDTO>>(users));
+        }
+
+        [HttpGet("search")]
+        public ActionResult<IEnumerable<UserDTO>> SearchUsers([FromQuery] string nickname)
+        {
+            var users = _userService.SearchUsers(nickname);
+            return Ok(_mapper.Map<IEnumerable<UserDTO>>(users));
+        }
     }
 }

@@ -1,3 +1,5 @@
+using MessangerBackend.Core.Interfaces;
+using MessangerBackend.Core.Services;
 using MessangerBackend.Storage;
 using Microsoft.EntityFrameworkCore;
 
@@ -5,8 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddDbContext<MessangerContext>(options => options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=MessangerDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"));
-
+builder.Services.AddDbContext<MessangerContext>(options => options.UseSqlServer("Server=.\\SQLEXPRESS;Database=MessangerDb;Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=False;"));
+builder.Services.AddTransient<IRepository, Repository>();
+builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

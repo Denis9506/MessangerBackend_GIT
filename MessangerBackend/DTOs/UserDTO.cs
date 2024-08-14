@@ -6,3 +6,9 @@ public class UserDTO
     public string Nickname { get; set; }
     public DateTime LastSeenOnline { get; set; }
 }
+
+public class UserLoginRegisterDTO
+{
+    public string Nickname { get; set; }
+    public string Password { get; set; }
+}

@@ -1,44 +1,56 @@
 ﻿using System.Linq.Expressions;
 using MessangerBackend.Core.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
-namespace MessangerBackend.Storage;
-
-public class Repository : IRepository
+namespace MessangerBackend.Storage
 {
-    private readonly MessangerContext _context;
-
-    public Repository(MessangerContext context)
+    public class Repository : IRepository
     {
-        _context = context;
-    }
+        private readonly MessangerContext _context;
 
-    public Task<T> Add<T>(T entity) where T : class
-    {
-        throw new NotImplementedException();
-    }
+        public Repository(MessangerContext context)
+        {
+            _context = context;
+        }
 
-    public Task<T> Update<T>(T entity) where T : class
-    {
-        throw new NotImplementedException();
-    }
+        public async Task<T> Add<T>(T entity) where T : class
+        {
+            var obj = _context.Add(entity);
+            await _context.SaveChangesAsync();
+            return obj.Entity;
+        }
 
-    public Task<T> Delete<T>(int id) where T : class
-    {
-        throw new NotImplementedException();
-    }
+        public async Task<T> Update<T>(T entity) where T : class
+        {
+            var newEntity = _context.Update(entity);
+            await _context.SaveChangesAsync();
+            return newEntity.Entity;
+        }
 
-    public Task<T> GetById<T>(int id) where T : class
-    {
-        throw new NotImplementedException();
-    }
+        public async Task<T> Delete<T>(int id) where T : class
+        {
+            var entity = await _context.Set<T>().FindAsync(id);
+            if (entity != null)
+            {
+                _context.Remove(entity);
+                await _context.SaveChangesAsync();
+            }
+            return entity;
+        }
 
-    public IQueryable GetAll<T>() where T : class
-    {
-        throw new NotImplementedException();
-    }
+        public async Task<T> GetById<T>(int id) where T : class
+        {
+            return await _context.Set<T>().FindAsync(id).AsTask();
+        }
 
-    public async Task<IEnumerable<T>> GetQuery<T>(Expression<Func<T, bool>> func) where T : class
-    {
-        return _context.Set<T>().Where(func);
+        public IQueryable<T> GetAll<T>() where T : class
+        {
+            return _context.Set<T>();
+        }
+
+        public async Task<IEnumerable<T>> GetQuery<T>(Expression<Func<T, bool>> func) where T : class
+        {
+            return await _context.Set<T>().Where(func).ToListAsync();
+        }
     }
 }

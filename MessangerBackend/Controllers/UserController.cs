@@ -24,6 +24,7 @@ namespace MessangerBackend.Controllers
             try
             {
                 var user = await _userService.Register(userDto.Nickname, userDto.Password);
+                //var jwt = JwtGenerator.GenerateJwt(user, "", DateTime.UtcNow.AddMinutes(5));
                 return Ok(_mapper.Map<UserDTO>(user));
             }
             catch (UserServiceException ex)
@@ -65,8 +66,8 @@ namespace MessangerBackend.Controllers
             return Ok(_mapper.Map<IEnumerable<UserDTO>>(users));
         }
 
-        [HttpGet("search")]
-        public ActionResult<IEnumerable<UserDTO>> SearchUsers([FromQuery] string nickname)
+        [HttpGet("search/{nickname}")]
+        public ActionResult<IEnumerable<UserDTO>> SearchUsers(string nickname)
         {
             var users = _userService.SearchUsers(nickname);
             return Ok(_mapper.Map<IEnumerable<UserDTO>>(users));

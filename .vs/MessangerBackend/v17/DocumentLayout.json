@@ -1,7 +1,40 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Den\\IT\\ASP.NET\\MessangerBackend_GIT\\MessangerBackend\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5722F493-96AC-4C2A-9734-7C131D4BD5A6}|MessangerBackend\\MessangerBackend.csproj|c:\\den\\it\\asp.net\\messangerbackend_git\\messangerbackend\\messangerbackend\\middlewares\\messagefilteringmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5722F493-96AC-4C2A-9734-7C131D4BD5A6}|MessangerBackend\\MessangerBackend.csproj|solutionrelative:messangerbackend\\middlewares\\messagefilteringmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5722F493-96AC-4C2A-9734-7C131D4BD5A6}|MessangerBackend\\MessangerBackend.csproj|c:\\den\\it\\asp.net\\messangerbackend_git\\messangerbackend\\messangerbackend\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5722F493-96AC-4C2A-9734-7C131D4BD5A6}|MessangerBackend\\MessangerBackend.csproj|solutionrelative:messangerbackend\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5722F493-96AC-4C2A-9734-7C131D4BD5A6}|MessangerBackend\\MessangerBackend.csproj|c:\\den\\it\\asp.net\\messangerbackend_git\\messangerbackend\\messangerbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5722F493-96AC-4C2A-9734-7C131D4BD5A6}|MessangerBackend\\MessangerBackend.csproj|solutionrelative:messangerbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5722F493-96AC-4C2A-9734-7C131D4BD5A6}|MessangerBackend\\MessangerBackend.csproj|c:\\den\\it\\asp.net\\messangerbackend_git\\messangerbackend\\messangerbackend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5722F493-96AC-4C2A-9734-7C131D4BD5A6}|MessangerBackend\\MessangerBackend.csproj|solutionrelative:messangerbackend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5722F493-96AC-4C2A-9734-7C131D4BD5A6}|MessangerBackend\\MessangerBackend.csproj|c:\\den\\it\\asp.net\\messangerbackend_git\\messangerbackend\\messangerbackend\\jwtgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5722F493-96AC-4C2A-9734-7C131D4BD5A6}|MessangerBackend\\MessangerBackend.csproj|solutionrelative:messangerbackend\\jwtgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5722F493-96AC-4C2A-9734-7C131D4BD5A6}|MessangerBackend\\MessangerBackend.csproj|c:\\den\\it\\asp.net\\messangerbackend_git\\messangerbackend\\messangerbackend\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5722F493-96AC-4C2A-9734-7C131D4BD5A6}|MessangerBackend\\MessangerBackend.csproj|solutionrelative:messangerbackend\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5722F493-96AC-4C2A-9734-7C131D4BD5A6}|MessangerBackend\\MessangerBackend.csproj|c:\\den\\it\\asp.net\\messangerbackend_git\\messangerbackend\\messangerbackend\\middlewares\\userstatisticsmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5722F493-96AC-4C2A-9734-7C131D4BD5A6}|MessangerBackend\\MessangerBackend.csproj|solutionrelative:messangerbackend\\middlewares\\userstatisticsmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3665FBA7-DC9E-4FD2-BA46-60E1B3BDCC3F}|MessangerBackend.Core\\MessangerBackend.Core.csproj|c:\\den\\it\\asp.net\\messangerbackend_git\\messangerbackend\\messangerbackend.core\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3665FBA7-DC9E-4FD2-BA46-60E1B3BDCC3F}|MessangerBackend.Core\\MessangerBackend.Core.csproj|solutionrelative:messangerbackend.core\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +42,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Den\\IT\\ASP.NET\\MessangerBackend_GIT\\MessangerBackend\\MessangerBackend\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "MessangerBackend\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Den\\IT\\ASP.NET\\MessangerBackend_GIT\\MessangerBackend\\MessangerBackend\\Controllers\\UserController.cs",
+              "RelativeToolTip": "MessangerBackend\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAowBoAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T09:01:16.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "JwtGenerator.cs",
+              "DocumentMoniker": "C:\\Den\\IT\\ASP.NET\\MessangerBackend_GIT\\MessangerBackend\\MessangerBackend\\JwtGenerator.cs",
+              "RelativeDocumentMoniker": "MessangerBackend\\JwtGenerator.cs",
+              "ToolTip": "C:\\Den\\IT\\ASP.NET\\MessangerBackend_GIT\\MessangerBackend\\MessangerBackend\\JwtGenerator.cs",
+              "RelativeToolTip": "MessangerBackend\\JwtGenerator.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T09:00:54.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "C:\\Den\\IT\\ASP.NET\\MessangerBackend_GIT\\MessangerBackend\\MessangerBackend\\DTOs\\UserDTO.cs",
+              "RelativeDocumentMoniker": "MessangerBackend\\DTOs\\UserDTO.cs",
+              "ToolTip": "C:\\Den\\IT\\ASP.NET\\MessangerBackend_GIT\\MessangerBackend\\MessangerBackend\\DTOs\\UserDTO.cs",
+              "RelativeToolTip": "MessangerBackend\\DTOs\\UserDTO.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAA7wBAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T09:00:27.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Den\\IT\\ASP.NET\\MessangerBackend_GIT\\MessangerBackend\\MessangerBackend\\Program.cs",
+              "RelativeDocumentMoniker": "MessangerBackend\\Program.cs",
+              "ToolTip": "C:\\Den\\IT\\ASP.NET\\MessangerBackend_GIT\\MessangerBackend\\MessangerBackend\\Program.cs",
+              "RelativeToolTip": "MessangerBackend\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T08:59:39.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MessageFilteringMiddleware.cs",
+              "DocumentMoniker": "C:\\Den\\IT\\ASP.NET\\MessangerBackend_GIT\\MessangerBackend\\MessangerBackend\\Middlewares\\MessageFilteringMiddleware.cs",
+              "RelativeDocumentMoniker": "MessangerBackend\\Middlewares\\MessageFilteringMiddleware.cs",
+              "ToolTip": "C:\\Den\\IT\\ASP.NET\\MessangerBackend_GIT\\MessangerBackend\\MessangerBackend\\Middlewares\\MessageFilteringMiddleware.cs",
+              "RelativeToolTip": "MessangerBackend\\Middlewares\\MessageFilteringMiddleware.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T08:59:15.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserStatisticsMiddleware.cs",
+              "DocumentMoniker": "C:\\Den\\IT\\ASP.NET\\MessangerBackend_GIT\\MessangerBackend\\MessangerBackend\\Middlewares\\UserStatisticsMiddleware.cs",
+              "RelativeDocumentMoniker": "MessangerBackend\\Middlewares\\UserStatisticsMiddleware.cs",
+              "ToolTip": "C:\\Den\\IT\\ASP.NET\\MessangerBackend_GIT\\MessangerBackend\\MessangerBackend\\Middlewares\\UserStatisticsMiddleware.cs",
+              "RelativeToolTip": "MessangerBackend\\Middlewares\\UserStatisticsMiddleware.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAUwB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T08:53:59.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MessageController.cs",
+              "DocumentMoniker": "C:\\Den\\IT\\ASP.NET\\MessangerBackend_GIT\\MessangerBackend\\MessangerBackend\\Controllers\\MessageController.cs",
+              "RelativeDocumentMoniker": "MessangerBackend\\Controllers\\MessageController.cs",
+              "ToolTip": "C:\\Den\\IT\\ASP.NET\\MessangerBackend_GIT\\MessangerBackend\\MessangerBackend\\Controllers\\MessageController.cs",
+              "RelativeToolTip": "MessangerBackend\\Controllers\\MessageController.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAqwDoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T08:48:40.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Message.cs",
+              "DocumentMoniker": "C:\\Den\\IT\\ASP.NET\\MessangerBackend_GIT\\MessangerBackend\\MessangerBackend.Core\\Models\\Message.cs",
+              "RelativeDocumentMoniker": "MessangerBackend.Core\\Models\\Message.cs",
+              "ToolTip": "C:\\Den\\IT\\ASP.NET\\MessangerBackend_GIT\\MessangerBackend\\MessangerBackend.Core\\Models\\Message.cs",
+              "RelativeToolTip": "MessangerBackend.Core\\Models\\Message.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T08:48:13.183Z"
             }
           ]
         }

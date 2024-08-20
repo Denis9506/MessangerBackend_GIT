@@ -1,8 +1,6 @@
-﻿using MessangerBackend.Core.Models.
-    Exceptions;
+﻿using MessangerBackend.Core.Models.Exceptions;
 using MessangerBackend.Core.Interfaces;
 using MessangerBackend.Core.Models;
-using MessangerBackend.Core.Models.Exceptions;
 using System.Text.RegularExpressions;
 
 namespace MessangerBackend.Core.Services

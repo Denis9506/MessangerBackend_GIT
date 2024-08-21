@@ -82,7 +82,7 @@ namespace MessangerBackend.Tests
         }
 
 
-
+        //---------------------------------------
 
 
 
@@ -124,7 +124,52 @@ namespace MessangerBackend.Tests
             await Assert.ThrowsAsync<UserServiceException>(exceptionNicknameHandler);
         }
 
+        //---------------------------------------
+
+        [Fact]
+        public async Task UserService_GetUserById_CorrectInput()
+        {
+            // Assign
+            var service = CreateUserService();
+            var expectedUser = new User { Nickname = "Denis" };
+
+            // Act
+            var user = await service.GetUserById(1);
+
+            // Assert
+            Assert.Equal(expectedUser, user, new UserComparer());
+        }
+
+        [Theory]
+        [InlineData(-2)] 
+        [InlineData(999)] 
+        [InlineData(null)]
+        public async Task UserService_GetUserById_InCorrectInput(int data)
+        {
+            // Assign
+            var service = CreateUserService();
+
+            // Act
+            var user = await service.GetUserById(data);
+
+            // Assert
+            Assert.Null(user);
+        }
+
+
+        [Fact]
+        public void UserService_GetUsers_ReturnsEmptyListWhenNoUsers()
+        {
+            // Assign
+            var service = CreateUserService();
+
+            // Act
+            var users = service.GetUsers(2, 10); 
+            // Assert
+            Assert.Empty(users);
+        }
     }
+
 
     class UserComparer : IEqualityComparer<User>
     {

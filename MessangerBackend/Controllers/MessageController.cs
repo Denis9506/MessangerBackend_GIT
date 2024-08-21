@@ -2,6 +2,7 @@
 using MessangerBackend.DTOs;
 using MessangerBackend.Storage;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace MessangerBackend.Controllers
 {
@@ -67,6 +68,16 @@ namespace MessangerBackend.Controllers
                 .ToList();
 
             return Ok(messages);
+        }
+
+        [HttpGet("{chatId}")]
+        public async Task<ActionResult<IEnumerable<ShowMessangerDTO>>> GetMessages(int chatId) {
+            var chat = await _context.PrivateChats.Include(x=>x.Messages).ThenInclude(x=>x.Sender).FirstAsync(x=>x.Id==chatId);
+            var messages = chat.Messages;
+
+            return Ok( messages.Select(x => new ShowMessangerDTO() { 
+            
+            }));
         }
     }
 }

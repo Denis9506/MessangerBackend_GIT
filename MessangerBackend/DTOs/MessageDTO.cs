@@ -7,4 +7,7 @@
         public string Text { get; set; }
 
     }
+
+    public class ShowMessangerDTO { 
+    }
 }
